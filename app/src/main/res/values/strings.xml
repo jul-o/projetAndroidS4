@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">M4104c-projet</string>
+
+    <string name="accueilWelcome">Bienvenue sur [nom à trouver]</string>
+    <string name="accueilSignup">Créer un compte</string>
+    <string name="accueilLogin">Se connecter</string>
+    <string name="loginLogin">Se connecter</string>
+    <string name="loginName">Ton nom</string>
+    <string name="loginPassword">Ton mot de passe</string>
+    <string name="loginBack">Retour</string>
+    <string name="loginFirstName">Ton prénom</string>
+</resources>

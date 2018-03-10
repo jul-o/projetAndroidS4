@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.jul.m4104c_projet.SignupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/signupSignup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Créer un compte" />
+
+        <EditText
+            android:id="@+id/signupEditName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ton nom"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/signupEditFirstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Ton prénom"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/signupTVAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choisis un avatar" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/signupRBAvatarLoutre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Loutre" />
+
+            <RadioButton
+                android:id="@+id/signupRBAvatarOrnithorynque"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="RadioButton"
+                tools:text="Ornithorynque" />
+
+            <RadioButton
+                android:id="@+id/signupRBAvatarCafard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Cafard" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/signupBtnSubmit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Créer un compte" />
+
+        <Button
+            android:id="@+id/signupBtnCancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Revenir à l'accueil" />
+
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
