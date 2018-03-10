@@ -4,18 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jul.m4104c_projet.AccueilActivity">
+    tools:context="com.example.jul.m4104c_projet2.AccueilActivity">
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
 
         <TextView
             android:id="@+id/accueilTVWelcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/accueilWelcome" />
+
+        <LinearLayout
+            android:id="@+id/accueilLayoutAccounts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"></LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,14 +35,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/accueilSignup" />
+                android:text="@string/accueilSignup"
+                android:onClick="clickCreateAccount"/>
 
             <Button
                 android:id="@+id/accueilBtnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/accueilLogin" />
+                android:text="@string/accueilLogin"
+                android:onClick="clickConnect"/>
         </LinearLayout>
 
     </LinearLayout>
