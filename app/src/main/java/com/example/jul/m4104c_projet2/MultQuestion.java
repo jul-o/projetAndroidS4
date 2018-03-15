@@ -2,16 +2,14 @@ package com.example.jul.m4104c_projet2;
 
 import android.content.Context;
 import android.text.InputType;
-import android.text.Layout;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
  * Created by jul on 12/03/18.
  */
 
-class MultQuestion extends LinearLayout {
+class MultQuestion extends QuestionMaths {
     //int table;
     //int val;
     int ans;
@@ -37,5 +35,11 @@ class MultQuestion extends LinearLayout {
 
     public int getAnswer(){
         return ans;
+    }
+
+    @Override
+    public boolean goodAns() {
+        int answ = Integer.parseInt(fieldAns.getText().toString());
+        return answ == this.ans;
     }
 }

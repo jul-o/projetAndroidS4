@@ -11,8 +11,10 @@ public class ChoiceExsMaths extends AppCompatActivity {
 
 
     public enum TypeExo{
+        CHOICE_MULTIPLICATION,
         MULTIPLICATION
     }
+
     public static final String EXTRA_TYPE = "type";
 
     @Override
@@ -22,8 +24,8 @@ public class ChoiceExsMaths extends AppCompatActivity {
     }
 
     public void clickMultiplication(View view) {
-        Intent intent = new Intent(this, ExoMaths.class);
-        intent.putExtra(EXTRA_TYPE, TypeExo.MULTIPLICATION);
+        Intent intent = new Intent(this, ExoMaths2.class);
+        intent.putExtra(EXTRA_TYPE, TypeExo.CHOICE_MULTIPLICATION);
         startActivity(intent);
     }
     public void clickChoiceMultBack(View view) {
