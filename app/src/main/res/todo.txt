@@ -1,0 +1,11 @@
+make the account selection scrollable
+
+ask for first name then for name in create account
+
+add a picture for avatars
+
+find a name
+
+create maths exs
+
+create french exs

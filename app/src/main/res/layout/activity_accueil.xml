@@ -38,13 +38,6 @@
                 android:text="@string/accueilSignup"
                 android:onClick="clickCreateAccount"/>
 
-            <Button
-                android:id="@+id/accueilBtnLogin"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="@string/accueilLogin"
-                android:onClick="clickConnect"/>
         </LinearLayout>
 
     </LinearLayout>

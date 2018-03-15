@@ -38,9 +38,17 @@
             android:text="Avatar" />
 
         <Button
+            android:id="@+id/homeBtnMaths"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Mathématiques"
+            android:onClick="clickMaths"/>
+
+        <Button
             android:id="@+id/HomeBtnDisconnect"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Se déconnecter" />
+            android:text="Se déconnecter"
+            android:onClick="clickDisconnect"/>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

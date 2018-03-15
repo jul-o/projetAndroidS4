@@ -7,6 +7,8 @@ import com.orm.SugarRecord;
  */
 
 public class Account extends SugarRecord {
+    public static Account currentAccount = null;
+
     public static final int AVATAR_LOUTRE_IND = 0;
     public static final int AVATAR_ORNI_IND = 1;
     public static final int AVATAR_CAFARD_IND = 2;

@@ -51,15 +51,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:text="Loutre" />
+                android:text="Loutre"
+                android:checked="true"/>
 
             <RadioButton
                 android:id="@+id/signupRBAvatarOrnithorynque"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:text="RadioButton"
-                tools:text="Ornithorynque" />
+                android:text="Ornithorynque" />
 
             <RadioButton
                 android:id="@+id/signupRBAvatarCafard"
