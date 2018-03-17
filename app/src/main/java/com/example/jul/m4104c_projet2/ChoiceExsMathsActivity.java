@@ -7,12 +7,11 @@ import android.view.View;
 
 
 
-public class ChoiceExsMaths extends AppCompatActivity {
-
-
+public class ChoiceExsMathsActivity extends AppCompatActivity {
     public enum TypeExo{
         CHOICE_MULTIPLICATION,
-        MULTIPLICATION
+        MULTIPLICATION,
+        ADDITIONS
     }
 
     public static final String EXTRA_TYPE = "type";
@@ -24,10 +23,14 @@ public class ChoiceExsMaths extends AppCompatActivity {
     }
 
     public void clickMultiplication(View view) {
-        Intent intent = new Intent(this, ExoMaths2.class);
+        Intent intent = new Intent(this, ExoMathsActivity.class);
         intent.putExtra(EXTRA_TYPE, TypeExo.CHOICE_MULTIPLICATION);
         startActivity(intent);
     }
-    public void clickChoiceMultBack(View view) {
+
+    public void clickAdditions(View view) {
+        Intent intent = new Intent(this, ExoMathsActivity.class);
+        intent.putExtra(EXTRA_TYPE, TypeExo.ADDITIONS);
+        startActivity(intent);
     }
 }

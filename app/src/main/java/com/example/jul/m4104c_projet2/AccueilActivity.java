@@ -41,7 +41,7 @@ public class AccueilActivity extends AppCompatActivity {
 
     public void clickAccount(Account acc) {
         Intent intent = new Intent(this, HomeActivity.class);
-        intent.putExtra(EXTRA_ACCOUNT, acc.getId());
+        Account.currentAccount = acc;
         startActivity(intent);
         finish();
     }

@@ -6,4 +6,37 @@
     android:layout_height="match_parent"
     tools:context="com.example.jul.m4104c_projet2.SuccessActivity">
 
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="495dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <TextView
+            android:id="@+id/successTVCongrats"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bravo !" />
+
+        <TextView
+            android:id="@+id/successTVExpl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tu as réussi l'exercice" />
+
+        <Button
+            android:id="@+id/successBtnBackMaths"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choisir un autre exercice de maths"
+            android:onClick="clickChoiceMaths"/>
+
+        <Button
+            android:id="@+id/successBtnBackHome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Revenir à l'accueil"
+            android:onClick="clickHome"/>
+    </LinearLayout>
 </android.support.constraint.ConstraintLayout>

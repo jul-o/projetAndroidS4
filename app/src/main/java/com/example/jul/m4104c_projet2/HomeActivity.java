@@ -6,8 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 public class HomeActivity extends AppCompatActivity {
     Account account;
 
@@ -16,8 +14,8 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        long idAcc = (Long) getIntent().getExtras().get(AccueilActivity.EXTRA_ACCOUNT);
-        this.account = Account.findById(Account.class, idAcc);
+
+        this.account = Account.currentAccount;
         TextView tv = (TextView) findViewById(R.id.homeTVFirstName);
         tv.setText(account.getFirstName());
         tv = (TextView) findViewById(R.id.homeTVName);
@@ -35,7 +33,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void clickMaths(View view) {
-        Intent intent = new Intent(this, ChoiceExsMaths.class);
+        Intent intent = new Intent(this, ChoiceExsMathsActivity.class);
         startActivity(intent);
     }
 }

@@ -6,27 +6,39 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.NumberPicker;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
 
-public class ExoMaths2 extends AppCompatActivity {
+public class ExoMathsActivity extends AppCompatActivity {
     private static final String EXTRA_MULT_TABLE = "table";
     private ArrayList<QuestionMaths> questions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        switch ((ChoiceExsMaths.TypeExo)(getIntent().getExtras().get(ChoiceExsMaths.EXTRA_TYPE))){
+        switch ((ChoiceExsMathsActivity.TypeExo)(getIntent().getExtras().get(ChoiceExsMathsActivity.EXTRA_TYPE))){
             case CHOICE_MULTIPLICATION:
                 initChoiceMult();
                 break;
             case MULTIPLICATION:
                 initMultExo((Integer) getIntent().getExtras().get(EXTRA_MULT_TABLE));
                 break;
+            case ADDITIONS:
+                initAddExo();
             default:
          }
+    }
+
+    private void initAddExo() {
+        setContentView(R.layout.activity_multiplication_table);
+        questions = new ArrayList<>();
+        LinearLayout layout = (LinearLayout) findViewById(R.id.exoMultLayoutQuest);
+        for(int i = 1; i <= 10; i++){
+            AddQuestion quest = new AddQuestion(this);
+            questions.add(quest);
+            layout.addView(quest);
+        }
     }
 
     private void initChoiceMult() {
@@ -51,8 +63,8 @@ public class ExoMaths2 extends AppCompatActivity {
         NumberPicker pick = (NumberPicker) findViewById(R.id.choiceMultPick);
         int val = pick.getValue();
 
-        Intent intent = new Intent(this, ExoMaths2.class);
-        intent.putExtra(ChoiceExsMaths.EXTRA_TYPE, ChoiceExsMaths.TypeExo.MULTIPLICATION);
+        Intent intent = new Intent(this, ExoMathsActivity.class);
+        intent.putExtra(ChoiceExsMathsActivity.EXTRA_TYPE, ChoiceExsMathsActivity.TypeExo.MULTIPLICATION);
         intent.putExtra(EXTRA_MULT_TABLE, val);
         startActivity(intent);
     }
@@ -63,13 +75,21 @@ public class ExoMaths2 extends AppCompatActivity {
 
     //common success test to all math exs
     public void clickExoSubmit(View view) {
-        int nbF = 0;
+        boolean ok = true;
         for(QuestionMaths q : questions){
-            if(!q.goodAns()){
-                nbF++;
-            }
+            if(!q.testAns()) ok = false;
         }
-        Toast.makeText(this, "Nb faux : " + nbF, Toast.LENGTH_LONG).show();
+        if(ok) success();
+    }
+
+    private void success() {
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        Intent intent = new Intent(this, SuccessActivity.class);
+        startActivity(intent);
     }
 
 }
