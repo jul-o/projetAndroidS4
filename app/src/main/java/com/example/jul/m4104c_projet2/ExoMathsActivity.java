@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 public class ExoMathsActivity extends AppCompatActivity {
     private static final String EXTRA_MULT_TABLE = "table";
-    private ArrayList<QuestionMaths> questions;
+    private ArrayList<Question> questions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -76,18 +76,13 @@ public class ExoMathsActivity extends AppCompatActivity {
     //common success test to all math exs
     public void clickExoSubmit(View view) {
         boolean ok = true;
-        for(QuestionMaths q : questions){
+        for(Question q : questions){
             if(!q.testAns()) ok = false;
         }
         if(ok) success();
     }
 
     private void success() {
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
         Intent intent = new Intent(this, SuccessActivity.class);
         startActivity(intent);
     }

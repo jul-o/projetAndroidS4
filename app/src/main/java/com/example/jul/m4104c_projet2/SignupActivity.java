@@ -40,7 +40,7 @@ public class SignupActivity extends AppCompatActivity {
             }
         }
 
-        Account account = new Account(name, firstName, avatarChecked);
+        DBAccount account = new DBAccount(name, firstName, avatarChecked);
         account.save();
 
         Intent intent = new Intent(this, AccueilActivity.class);

@@ -3,3 +3,7 @@ add the avatar everywhere
 verify the account has each field filled and that each account is not the same
 
 take care of screen rotation
+
+fill the database with json
+
+try fusion ExoMathActivity and ExoFrActivity

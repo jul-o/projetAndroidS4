@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context="com.example.jul.m4104c_projet2.ExoFrActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -16,7 +17,7 @@
             android:orientation="vertical">
 
             <LinearLayout
-                android:id="@+id/exoMultLayoutQuest"
+                android:id="@+id/exoFrLayoutQuest"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
@@ -33,12 +34,11 @@
                 android:onClick="clickExoSubmit"/>
 
             <Button
-                android:id="@+id/exoMultBtnBack"
+                android:id="@+id/exoFrBtnBack"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Retour"
                 android:onClick="clickBack"/>
         </LinearLayout>
     </ScrollView>
-
 </android.support.constraint.ConstraintLayout>

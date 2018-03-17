@@ -45,6 +45,13 @@
             android:onClick="clickMaths"/>
 
         <Button
+            android:id="@+id/homeBtnFr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Français"
+            android:onClick="clickFr"/>
+
+        <Button
             android:id="@+id/HomeBtnDisconnect"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

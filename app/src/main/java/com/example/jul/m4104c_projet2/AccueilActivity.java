@@ -1,14 +1,12 @@
 package com.example.jul.m4104c_projet2;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class AccueilActivity extends AppCompatActivity {
@@ -20,13 +18,13 @@ public class AccueilActivity extends AppCompatActivity {
         setContentView(R.layout.activity_accueil);
 
         //Si une session est en cours, redirection vers la page home
-        if (Account.currentAccount != null) {
-            clickAccount(Account.currentAccount);
+        if (DBAccount.currentAccount != null) {
+            clickAccount(DBAccount.currentAccount);
         }
         LinearLayout layoutAccounts = (LinearLayout) findViewById(R.id.accueilLayoutAccounts);
-        List<Account> accounts = Account.listAll(Account.class);
+        List<DBAccount> accounts = DBAccount.listAll(DBAccount.class);
         for (int i = 0; i < accounts.size(); i++) {
-            Account acc = accounts.get(i);
+            DBAccount acc = accounts.get(i);
             LoginSelectAccount elt = new LoginSelectAccount(this, acc);
             layoutAccounts.addView(elt);
         }
@@ -39,9 +37,9 @@ public class AccueilActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void clickAccount(Account acc) {
+    public void clickAccount(DBAccount acc) {
         Intent intent = new Intent(this, HomeActivity.class);
-        Account.currentAccount = acc;
+        DBAccount.currentAccount = acc;
         startActivity(intent);
         finish();
     }

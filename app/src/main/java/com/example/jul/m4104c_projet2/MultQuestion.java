@@ -3,15 +3,13 @@ package com.example.jul.m4104c_projet2;
 import android.content.Context;
 import android.text.InputType;
 import android.widget.EditText;
-import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 /**
  * Created by jul on 12/03/18.
  */
 
-class MultQuestion extends QuestionMaths {
+class MultQuestion extends Question {
     //int table;
     //int val;
     int ans;

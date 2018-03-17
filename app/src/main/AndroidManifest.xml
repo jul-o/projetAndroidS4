@@ -35,7 +35,9 @@
         <activity android:name=".HomeActivity" />
         <activity android:name=".ChoiceExsMathsActivity" />
         <activity android:name=".SuccessActivity" />
-        <activity android:name=".ExoMathsActivity"></activity>
+        <activity android:name=".ExoMathsActivity" />
+        <activity android:name=".ChoiceExsFrActivity" />
+        <activity android:name=".ExoFrActivity"></activity>
     </application>
 
 </manifest>

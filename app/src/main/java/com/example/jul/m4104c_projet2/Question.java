@@ -8,11 +8,11 @@ import android.widget.LinearLayout;
  * Created by jul on 15/03/18.
  */
 
-abstract class QuestionMaths extends LinearLayout {
+abstract class Question extends LinearLayout {
 
     ImageView imgSucc;
 
-    public QuestionMaths(Context context) {
+    public Question(Context context) {
         super(context);
         imgSucc = new ImageView(context);
     }

@@ -6,24 +6,24 @@ import com.orm.SugarRecord;
  * Created by sangj on 09/03/18.
  */
 
-public class Account extends SugarRecord {
-    public static Account currentAccount = null;
-
+public class DBAccount extends SugarRecord {
     public static final int AVATAR_LOUTRE_IND = 0;
     public static final int AVATAR_ORNI_IND = 1;
     public static final int AVATAR_CAFARD_IND = 2;
-
     public static final String AVATARS[] = {"Loutre", "Ornithorynque", "Cafard"};
-
+    public static DBAccount currentAccount = null;
     private String name;
     private String firstName;
     private String avatar;
 
-    public Account(){
 
+    public DBAccount() {
+        name = "";
+        firstName = "";
+        avatar = "";
     }
 
-    public Account(String name, String firstName, int avatar){
+    public DBAccount(String name, String firstName, int avatar) {
         this.name = name;
         this.firstName = firstName;
         this.avatar = AVATARS[avatar];

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity {
-    Account account;
+    DBAccount account;
 
 
     @Override
@@ -15,7 +15,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
-        this.account = Account.currentAccount;
+        this.account = DBAccount.currentAccount;
         TextView tv = (TextView) findViewById(R.id.homeTVFirstName);
         tv.setText(account.getFirstName());
         tv = (TextView) findViewById(R.id.homeTVName);
@@ -27,13 +27,18 @@ public class HomeActivity extends AppCompatActivity {
     public void clickDisconnect(View view) {
         Intent intent = new Intent(this, AccueilActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        Account.currentAccount = null;
+        DBAccount.currentAccount = null;
         startActivity(intent);
         finish();
     }
 
     public void clickMaths(View view) {
         Intent intent = new Intent(this, ChoiceExsMathsActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickFr(View view) {
+        Intent intent = new Intent(this, ChoiceExsFrActivity.class);
         startActivity(intent);
     }
 }

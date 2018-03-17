@@ -9,7 +9,7 @@ import android.widget.TextView;
  * Created by sangj on 16/03/18.
  */
 
-class AddQuestion extends QuestionMaths{
+class AddQuestion extends Question {
     static final int RANGE = 100;
     int memb1;
     int memb2;
