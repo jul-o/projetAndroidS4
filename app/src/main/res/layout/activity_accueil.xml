@@ -28,17 +28,27 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/accueilBtnSignup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0"
                 android:text="@string/accueilSignup"
                 android:onClick="clickCreateAccount"/>
 
+            <Button
+                android:id="@+id/accueilBtnDeleteAcc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:text="Effacer un compte"
+                android:onClick="clickDeleteAcc"/>
+
+
         </LinearLayout>
+
 
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

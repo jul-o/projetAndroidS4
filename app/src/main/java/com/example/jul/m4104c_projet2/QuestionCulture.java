@@ -1,19 +1,21 @@
 package com.example.jul.m4104c_projet2;
 
 import android.content.Context;
-import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+
 
 /**
  * Created by jul on 17/03/18.
  */
 
-public class QuestionFr extends Question {
-    DBQuestionFr question;
+public class QuestionCulture extends Question {
+    DBQuestionCulture question;
 
     TextView tvPart1;
     TextView tvPart2;
@@ -23,20 +25,21 @@ public class QuestionFr extends Question {
     RadioButton choice2;
     RadioButton choice3;
 
-    public QuestionFr(Context context) {
+    public QuestionCulture(Context context) {
         super(context);
 
     }
 
-    public QuestionFr(Context ctx, List<DBQuestionFr> qs) {
+    public QuestionCulture(Context ctx, List<DBQuestionCulture> qs) {
         super(ctx);
         int nbQDisp = qs.size() - 1;
         int idQ = (int) (Math.random()*(nbQDisp));
         question = qs.get(idQ);
+        qs.remove(idQ);
         init(question);
     }
 
-    private void init(DBQuestionFr question) {
+    private void init(DBQuestionCulture question) {
         tvPart1 = new TextView(getContext());
         tvPart2 = new TextView(getContext());
         editAns = new TextView(getContext());
@@ -44,6 +47,7 @@ public class QuestionFr extends Question {
         choice1 = new RadioButton(getContext());
         choice2 = new RadioButton(getContext());
         choice3 = new RadioButton(getContext());
+        RadioButton choices[] = {choice1, choice2, choice3};
 
         tvPart1.setText(question.getPart1());
         tvPart2.setText(question.getPart2());
@@ -51,9 +55,15 @@ public class QuestionFr extends Question {
         group.addView(choice1);
         group.addView(choice2);
         group.addView(choice3);
-        choice1.setText(question.getRep());
-        choice2.setText(question.getRepF1());
-        choice3.setText(question.getRepF2());
+
+        ArrayList<String> list = new ArrayList<>(Arrays.asList(question.getRep(), question.getRepF1(), question.getRepF2()));
+        int size = list.size();
+
+        for(int i = 0; i < size; i++){
+            int index = (int)Math.round(Math.random()*(list.size() - 1));
+            choices[i].setText(list.get(index));
+            list.remove(index);
+        }
 
         addView(tvPart1);
         addView(editAns);
@@ -63,6 +73,9 @@ public class QuestionFr extends Question {
 
     @Override
     public boolean goodAns() {
-        return choice1.isChecked();
+        return(choice1.isChecked()&&choice1.getText().toString().equals(question.getRep())
+                ||choice2.isChecked()&&choice2.getText().toString().equals(question.getRep())
+                ||choice3.isChecked()&&choice3.getText().toString().equals(question.getRep()));
+
     }
 }

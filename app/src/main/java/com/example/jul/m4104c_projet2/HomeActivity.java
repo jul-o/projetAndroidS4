@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class HomeActivity extends AppCompatActivity {
@@ -17,11 +18,30 @@ public class HomeActivity extends AppCompatActivity {
 
         this.account = DBAccount.currentAccount;
         TextView tv = (TextView) findViewById(R.id.homeTVFirstName);
-        tv.setText(account.getFirstName());
+        tv.setText(account.getFirstName() + " ");
+
         tv = (TextView) findViewById(R.id.homeTVName);
         tv.setText(account.getName());
-        tv = (TextView) findViewById(R.id.homeTVAvatar);
-        tv.setText(account.getAvatar());
+
+        tv = (TextView) findViewById(R.id.homeTVScore);
+        tv.setText("Score : " + account.getScore());
+
+        /*tv = (TextView) findViewById(R.id.homeTVAvatar);
+        tv.setText(account.getAvatar());*/
+        ImageView imgAvatar = (ImageView) findViewById(R.id.homeIVAvatar);
+        switch (account.getAvatar()){
+            case LOUTRE:
+                imgAvatar.setImageResource(R.mipmap.ic_loutre);
+                break;
+            case ORNITHORYNQUE:
+                imgAvatar.setImageResource(R.mipmap.ic_ornithorynque);
+                break;
+            case VACHE:
+                imgAvatar.setImageResource(R.mipmap.ic_vache);
+                break;
+
+        }
+        //imgAvatar.setImageResource(R.drawable.);
     }
 
     public void clickDisconnect(View view) {
@@ -38,7 +58,7 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void clickFr(View view) {
-        Intent intent = new Intent(this, ChoiceExsFrActivity.class);
+        Intent intent = new Intent(this, ChoiceExsCultureActivity.class);
         startActivity(intent);
     }
 }

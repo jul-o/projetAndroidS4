@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.jul.m4104c_projet2.SuccessActivity">
+    tools:context="com.example.jul.m4104c_projet2.SuccessActivityMath">
 
     <LinearLayout
         android:layout_width="368dp"
@@ -14,26 +14,26 @@
         tools:layout_editor_absoluteY="8dp">
 
         <TextView
-            android:id="@+id/successTVCongrats"
+            android:id="@+id/successMathTVCongrats"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Bravo !" />
 
         <TextView
-            android:id="@+id/successTVExpl"
+            android:id="@+id/successMathTVExpl"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Tu as réussi l'exercice" />
 
         <Button
-            android:id="@+id/successBtnBackMaths"
+            android:id="@+id/successMathBtnBackMaths"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Choisir un autre exercice de maths"
             android:onClick="clickChoiceMaths"/>
 
         <Button
-            android:id="@+id/successBtnBackHome"
+            android:id="@+id/successMathBtnBackHome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Revenir à l'accueil"

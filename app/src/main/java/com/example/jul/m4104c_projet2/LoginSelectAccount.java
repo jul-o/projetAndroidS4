@@ -12,6 +12,7 @@ import android.widget.TextView;
 public class LoginSelectAccount extends LinearLayout {
     private TextView name;
 
+
     LoginSelectAccount(Context ctx) {
         super(ctx);
     }
@@ -26,7 +27,9 @@ public class LoginSelectAccount extends LinearLayout {
         this.setOnClickListener(new SelectAccountOnClickListener(ctx, acc));
     }
 
-
+    public TextView getName() {
+        return name;
+    }
 }
 
 class SelectAccountOnClickListener implements View.OnClickListener {
@@ -40,7 +43,6 @@ class SelectAccountOnClickListener implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        DBAccount.currentAccount = acc;
         ctx.clickAccount(acc);
     }
 }

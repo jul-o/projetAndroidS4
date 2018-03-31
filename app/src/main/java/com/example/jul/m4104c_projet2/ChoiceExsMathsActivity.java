@@ -28,6 +28,13 @@ public class ChoiceExsMathsActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(this, HomeActivity.class);
+        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+
     public void clickAdditions(View view) {
         Intent intent = new Intent(this, ExoMathsActivity.class);
         intent.putExtra(EXTRA_TYPE, TypeExo.ADDITIONS);

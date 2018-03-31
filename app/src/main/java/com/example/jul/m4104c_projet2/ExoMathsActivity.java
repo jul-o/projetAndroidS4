@@ -14,6 +14,11 @@ public class ExoMathsActivity extends AppCompatActivity {
     private static final String EXTRA_MULT_TABLE = "table";
     private ArrayList<Question> questions;
 
+    private ChoiceExsMathsActivity.TypeExo type;
+
+    private static final int SCORE_MULT = 5;
+    private static final int SCORE_ADD = 10;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,18 +28,20 @@ public class ExoMathsActivity extends AppCompatActivity {
                 break;
             case MULTIPLICATION:
                 initMultExo((Integer) getIntent().getExtras().get(EXTRA_MULT_TABLE));
+                type = ChoiceExsMathsActivity.TypeExo.MULTIPLICATION;
                 break;
             case ADDITIONS:
                 initAddExo();
+                type = ChoiceExsMathsActivity.TypeExo.ADDITIONS;
             default:
-         }
+        }
     }
 
     private void initAddExo() {
         setContentView(R.layout.activity_multiplication_table);
         questions = new ArrayList<>();
         LinearLayout layout = (LinearLayout) findViewById(R.id.exoMultLayoutQuest);
-        for(int i = 1; i <= 10; i++){
+        for(int i = 1; i <= 5; i++){
             AddQuestion quest = new AddQuestion(this);
             questions.add(quest);
             layout.addView(quest);
@@ -83,7 +90,16 @@ public class ExoMathsActivity extends AppCompatActivity {
     }
 
     private void success() {
-        Intent intent = new Intent(this, SuccessActivity.class);
+        switch(this.type){
+            case MULTIPLICATION:
+                DBAccount.currentAccount.setScore(DBAccount.currentAccount.getScore()+ SCORE_MULT);
+                break;
+            case ADDITIONS:
+                DBAccount.currentAccount.setScore(DBAccount.currentAccount.getScore()+ SCORE_ADD);
+                break;
+        }
+        DBAccount.currentAccount.save();
+        Intent intent = new Intent(this, SuccessActivityMath.class);
         startActivity(intent);
     }
 

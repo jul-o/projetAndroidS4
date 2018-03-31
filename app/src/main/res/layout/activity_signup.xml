@@ -11,7 +11,7 @@
         android:layout_height="495dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp">
+        tools:layout_editor_absoluteX="10dp">
 
         <TextView
             android:id="@+id/signupSignup"
@@ -44,29 +44,32 @@
         <RadioGroup
             android:id="@+id/signupRGAvatar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <RadioButton
-                android:id="@+id/signupRBAvatarLoutre"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/signupIBLoutre"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="Loutre"
-                android:checked="true"/>
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/ic_loutre"
+                android:onClick="clickLoutre"/>
 
-            <RadioButton
-                android:id="@+id/signupRBAvatarOrnithorynque"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/signupIBOrnithorynque"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="Ornithorynque" />
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/ic_ornithorynque"
+                android:onClick="clickOrni"/>
 
-            <RadioButton
-                android:id="@+id/signupRBAvatarCafard"
-                android:layout_width="match_parent"
+            <ImageButton
+                android:id="@+id/signupIBVache"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0"
-                android:text="Cafard" />
+                android:layout_weight="1"
+                app:srcCompat="@mipmap/ic_vache"
+                android:onClick="clickVache"/>
         </RadioGroup>
 
         <Button

@@ -10,23 +10,33 @@ public class DBAccount extends SugarRecord {
     public static final int AVATAR_LOUTRE_IND = 0;
     public static final int AVATAR_ORNI_IND = 1;
     public static final int AVATAR_CAFARD_IND = 2;
-    public static final String AVATARS[] = {"Loutre", "Ornithorynque", "Cafard"};
+
+
+    public enum AVATARS{
+        LOUTRE,
+        ORNITHORYNQUE,
+        VACHE
+    }
     public static DBAccount currentAccount = null;
     private String name;
     private String firstName;
-    private String avatar;
+    private int avatar;
+    private int score;
 
 
     public DBAccount() {
         name = "";
         firstName = "";
-        avatar = "";
+        avatar = AVATARS.LOUTRE.ordinal();
+        score = 0;
     }
 
-    public DBAccount(String name, String firstName, int avatar) {
+    public DBAccount(String name, String firstName, AVATARS avatar) {
         this.name = name;
         this.firstName = firstName;
-        this.avatar = AVATARS[avatar];
+        this.avatar = avatar.ordinal();
+        score = 0;
+
     }
 
     public String getName() {
@@ -45,11 +55,19 @@ public class DBAccount extends SugarRecord {
         this.firstName = firstName;
     }
 
-    public String getAvatar() {
-        return avatar;
+    public AVATARS getAvatar() {
+        return AVATARS.values()[avatar];
     }
 
-    public void setAvatar(String avatar) {
-        this.avatar = avatar;
+    public void setAvatar(AVATARS avatar) {
+        this.avatar = avatar.ordinal();
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void setScore(int score) {
+        this.score = score;
     }
 }

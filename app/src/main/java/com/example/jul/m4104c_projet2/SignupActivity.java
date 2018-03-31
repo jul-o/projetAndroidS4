@@ -11,6 +11,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 public class SignupActivity extends AppCompatActivity {
+    DBAccount.AVATARS lastclicked = DBAccount.AVATARS.LOUTRE;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,22 +26,11 @@ public class SignupActivity extends AppCompatActivity {
 
         ArrayList<RadioButton> avatars = new ArrayList<>();
         RadioGroup RGAvatars = (RadioGroup) findViewById(R.id.signupRGAvatar);
-        for(int i = 0; i < RGAvatars.getChildCount(); i++){
-            RadioButton rb = (RadioButton) RGAvatars.getChildAt(i);
-            avatars.add(rb);
-        }
-
-
 
         String name = new String(tvName.getText().toString());
         String firstName = new String(tvFirstName.getText().toString());
-        for(int i = 0; i < avatars.size(); i++){
-            if(avatars.get(i).isChecked()){
-                avatarChecked = i;
-            }
-        }
 
-        DBAccount account = new DBAccount(name, firstName, avatarChecked);
+        DBAccount account = new DBAccount(name, firstName, lastclicked);
         account.save();
 
         Intent intent = new Intent(this, AccueilActivity.class);
@@ -50,5 +40,17 @@ public class SignupActivity extends AppCompatActivity {
 
     public void clickBack(View view) {
         finish();
+    }
+
+    public void clickLoutre(View view) {
+        lastclicked = DBAccount.AVATARS.LOUTRE;
+    }
+
+    public void clickOrni(View view) {
+        lastclicked = DBAccount.AVATARS.ORNITHORYNQUE;
+    }
+
+    public void clickVache(View view) {
+        lastclicked = DBAccount.AVATARS.VACHE;
     }
 }
