@@ -3,9 +3,13 @@ package com.example.jul.m4104c_projet2;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.NumberPicker;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -22,7 +26,7 @@ public class ExoMathsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        switch ((ChoiceExsMathsActivity.TypeExo)(getIntent().getExtras().get(ChoiceExsMathsActivity.EXTRA_TYPE))){
+        switch ((ChoiceExsMathsActivity.TypeExo) (getIntent().getExtras().get(ChoiceExsMathsActivity.EXTRA_TYPE))) {
             case CHOICE_MULTIPLICATION:
                 initChoiceMult();
                 break;
@@ -41,7 +45,7 @@ public class ExoMathsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_multiplication_table);
         questions = new ArrayList<>();
         LinearLayout layout = (LinearLayout) findViewById(R.id.exoMultLayoutQuest);
-        for(int i = 1; i <= 5; i++){
+        for (int i = 1; i <= 5; i++) {
             AddQuestion quest = new AddQuestion(this);
             questions.add(quest);
             layout.addView(quest);
@@ -59,7 +63,7 @@ public class ExoMathsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_multiplication_table);
         questions = new ArrayList<>();
         LinearLayout layout = (LinearLayout) findViewById(R.id.exoMultLayoutQuest);
-        for(int i = 1; i <= 10; i++){
+        for (int i = 1; i <= 10; i++) {
             MultQuestion quest = new MultQuestion(this, table, i);
             questions.add(quest);
             layout.addView(quest);
@@ -83,21 +87,40 @@ public class ExoMathsActivity extends AppCompatActivity {
     //common success test to all math exs
     public void clickExoSubmit(View view) {
         boolean ok = true;
-        for(Question q : questions){
-            if(!q.testAns()) ok = false;
+        for (Question q : questions) {
+            if (!q.testAns()) ok = false;
         }
-        if(ok) success();
+        if (ok) success();
     }
 
     private void success() {
-        switch(this.type){
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_add_score, (ViewGroup) findViewById(R.id.toast_add_score_root));
+        Toast notify = new Toast(this);
+        notify.setView(layout);
+        notify.setDuration(Toast.LENGTH_LONG);
+
+        TextView infoNotify = (TextView) layout.findViewById(R.id.toastAddScoreTVInfo);
+        switch (this.type) {
             case MULTIPLICATION:
-                DBAccount.currentAccount.setScore(DBAccount.currentAccount.getScore()+ SCORE_MULT);
+                DBAccount.currentAccount.setScore(DBAccount.currentAccount.getScore() + SCORE_MULT);
+                infoNotify.setText("Tu as gagné " + SCORE_MULT + " de score !");
                 break;
             case ADDITIONS:
-                DBAccount.currentAccount.setScore(DBAccount.currentAccount.getScore()+ SCORE_ADD);
+                DBAccount.currentAccount.setScore(DBAccount.currentAccount.getScore() + SCORE_ADD);
+                DBAccount.currentAccount.save();
+                infoNotify.setText("Tu as gagné " + SCORE_ADD + " de score !");
                 break;
         }
+
+
+        notify.show();
+
+        /*try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }*/
         DBAccount.currentAccount.save();
         Intent intent = new Intent(this, SuccessActivityMath.class);
         startActivity(intent);

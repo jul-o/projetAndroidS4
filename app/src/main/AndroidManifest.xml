@@ -19,7 +19,7 @@
         <meta-data android:name="VERSION" android:value="2" />
         <meta-data android:name="QUERY_LOG" android:value="true" />
         -->
-        <meta-data android:name="VERSION" android:value="4" />
+        <meta-data android:name="VERSION" android:value="6" />
         <meta-data
             android:name="DOMAIN_PACKAGE_NAME"
             android:value="com.example" />
@@ -31,15 +31,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
-        <activity android:name=".SignupActivity" />
-        <activity android:name=".HomeActivity" />
-        <activity android:name=".ChoiceExsMathsActivity" />
-        <activity android:name=".SuccessActivityMath" />
-        <activity android:name=".ExoMathsActivity" />
-        <activity android:name=".ChoiceExsCultureActivity" />
-        <activity android:name=".ExoCultureActivity" />
-        <activity android:name=".SuccessActivityCulture"></activity>
+        <activity android:name=".LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SignupActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".HomeActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ChoiceExsMathsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SuccessActivityMath"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ExoMathsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ChoiceExsCultureActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ExoCultureActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".SuccessActivityCulture"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

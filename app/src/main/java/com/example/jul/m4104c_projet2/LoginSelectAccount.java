@@ -2,6 +2,7 @@ package com.example.jul.m4104c_projet2;
 
 import android.content.Context;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -11,6 +12,7 @@ import android.widget.TextView;
 
 public class LoginSelectAccount extends LinearLayout {
     private TextView name;
+    private ImageView avatar;
 
 
     LoginSelectAccount(Context ctx) {
@@ -22,7 +24,23 @@ public class LoginSelectAccount extends LinearLayout {
         this.setOrientation(VERTICAL);
         this.name = new TextView(ctx);
         this.addView(name);
-        this.name.setText(acc.getFirstName() + " " + acc.getName() + "\n" + acc.getAvatar());
+        this.name.setText(acc.getFirstName() + " " + acc.getName()/* + "\n" + acc.getAvatar()*/);
+
+        this.avatar = new ImageView(ctx);
+        switch (acc.getAvatar()){
+            case LOUTRE:
+                this.avatar.setImageResource(R.mipmap.ic_loutre);
+                break;
+            case ORNITHORYNQUE:
+                this.avatar.setImageResource(R.mipmap.ic_ornithorynque);
+                break;
+            case VACHE:
+                this.avatar.setImageResource(R.mipmap.ic_vache);
+                break;
+        }
+
+        addView(avatar);
+
         this.setPadding(0, 0, 0, 50);
         this.setOnClickListener(new SelectAccountOnClickListener(ctx, acc));
     }

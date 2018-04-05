@@ -69,47 +69,59 @@ public class DBQuestionCulture extends SugarRecord<DBQuestionCulture>{
 
 
 
-        q = new DBQuestionCulture("Napoléon est : ", "", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
+        q = new DBQuestionCulture("Napoléon est :", " ", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Prise de la Bastille : ", "", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
+        q = new DBQuestionCulture("Prise de la Bastille :", " ", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Napoléon est : ", "", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
+        q = new DBQuestionCulture("Date de la découverte de l'amérique :", " ", "1492", "2015", "-529", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Prise de la Bastille : ", "", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
+        q = new DBQuestionCulture("Leader allemand de la\n" +
+                "seconde guerre mondiale :", " ", "Hitler", "Staline", "Sarkozy", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Napoléon est : ", "", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
+        q = new DBQuestionCulture("Jules-", "", "César", "Le-SANG", "L'OVNI", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Prise de la Bastille : ", "", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
+        q = new DBQuestionCulture("Jeanne d'Arc :", " ", "Guerre de cent ans", "révolution", "chanteuse de métal médiéval", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Napoléon est : ", "", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
+        q = new DBQuestionCulture("Napoléon est :", " ", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Prise de la Bastille : ", "", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
+        q = new DBQuestionCulture("Prise de la Bastille :", " ", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Napoléon est : ", "", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
+        q = new DBQuestionCulture("Date de la découverte de l'amérique :", " ", "1492", "2015", "-529", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Prise de la Bastille : ", "", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
+        q = new DBQuestionCulture("Leader allemand de la\n" +
+                "seconde guerre mondiale :", " ", "Hitler", "Staline", "Sarkozy", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Napoléon est : ", "", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
+        q = new DBQuestionCulture("Jules-", "", "César", "Le-SANG", "L'OVNI", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Prise de la Bastille : ", "", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
+        q = new DBQuestionCulture("Jeanne d'Arc :", " ", "Guerre de cent ans", "révolution", "chanteuse de métal médiéval", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Napoléon est : ", "", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
+        q = new DBQuestionCulture("Napoléon est :", " ", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Prise de la Bastille : ", "", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
+        q = new DBQuestionCulture("Prise de la Bastille :", " ", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Napoléon est : ", "", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
+        q = new DBQuestionCulture("Date de la découverte de l'amérique :", " ", "1492", "2015", "-529", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Prise de la Bastille : ", "", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
+        q = new DBQuestionCulture("Leader allemand de la\n" +
+                "seconde guerre mondiale :", " ", "Hitler", "Staline", "Sarkozy", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Napoléon est : ", "", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
+        q = new DBQuestionCulture("Jules-", "", "César", "Le-SANG", "L'OVNI", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Prise de la Bastille : ", "", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
+        q = new DBQuestionCulture("Jeanne d'Arc :", " ", "Guerre de cent ans", "révolution", "chanteuse de métal médiéval", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Napoléon est : ", "", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
+        q = new DBQuestionCulture("Napoléon est :", " ", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
         q.save();
-        q = new DBQuestionCulture("Prise de la Bastille : ", "", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
+        q = new DBQuestionCulture("Prise de la Bastille :", " ", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
         q.save();
-
+        q = new DBQuestionCulture("Date de la découverte de l'amérique :", " ", "1492", "2015", "-529", TAGS.HIST);
+        q.save();
+        q = new DBQuestionCulture("Leader allemand de la\n" +
+                "seconde guerre mondiale :", " ", "Hitler", "Staline", "Sarkozy", TAGS.HIST);
+        q.save();
+        q = new DBQuestionCulture("Jules-", "", "César", "Le-SANG", "L'OVNI", TAGS.HIST);
+        q.save();
+        q = new DBQuestionCulture("Jeanne d'Arc :", " ", "Guerre de cent ans", "révolution", "chanteuse de métal médiéval", TAGS.HIST);
+        q.save();
+        
     }
 
     public DBQuestionCulture() {
