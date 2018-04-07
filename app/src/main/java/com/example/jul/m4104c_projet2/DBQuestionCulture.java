@@ -121,7 +121,7 @@ public class DBQuestionCulture extends SugarRecord<DBQuestionCulture>{
         q.save();
         q = new DBQuestionCulture("Jeanne d'Arc :", " ", "Guerre de cent ans", "révolution", "chanteuse de métal médiéval", TAGS.HIST);
         q.save();
-        
+
     }
 
     public DBQuestionCulture() {
