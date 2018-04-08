@@ -8,6 +8,10 @@ import android.view.View;
 public class ChoiceExsCultureActivity extends AppCompatActivity {
     public static final String EXTRA_TYPE_EXO = "type";
 
+    public void clickBack(View view) {
+        finish();
+    }
+
     public enum TypeExo {
         FR,
         HIST

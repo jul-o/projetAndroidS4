@@ -4,7 +4,8 @@
     android:id="@+id/toast_add_score_root"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:background="#04003d">
 
     <ImageView
         android:id="@+id/toastAddScoreImgInfo"
@@ -18,5 +19,6 @@
         android:layout_height="match_parent"
         android:gravity="fill_vertical"
         android:text="Vous venez de gagner du score"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:textColor="#0095b3"/>
 </LinearLayout>

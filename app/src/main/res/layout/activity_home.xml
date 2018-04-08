@@ -8,7 +8,7 @@
 
     <LinearLayout
         android:layout_width="368dp"
-        android:layout_height="495dp"
+        android:layout_height="550dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp">
@@ -25,9 +25,7 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="Prénom"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:background="#ff5900"/>
 
             <TextView
                 android:id="@+id/homeTVName"
@@ -36,41 +34,15 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:text="Nom"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="30sp"
-                android:textStyle="bold" />
+                android:background="#ff5900"/>
         </LinearLayout>
 
         <TextView
             android:id="@+id/homeTVScore"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Score : " />
-
-        <Button
-            android:id="@+id/homeBtnMaths"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:elevation="0dp"
-            android:onClick="clickMaths"
-            android:text="Mathématiques"
-            android:textColor="#4524ff" />
-
-        <Button
-            android:id="@+id/homeBtnFr"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="clickFr"
-            android:text="Culture générale"
-            android:textColor="#4524ff"/>
-
-        <Button
-            android:id="@+id/HomeBtnDisconnect"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:onClick="clickDisconnect"
-            android:text="Se déconnecter"
-            android:textColor="#4524ff"/>
+            android:text="Score : "
+            android:background="#ff5900"/>
 
         <ImageView
             android:id="@+id/homeIVAvatar"
@@ -78,5 +50,29 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             app:srcCompat="@mipmap/ic_loutre" />
+
+        <Button
+            android:id="@+id/homeBtnMaths"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="0dp"
+            android:onClick="clickMaths"
+            android:text="Mathématiques" />
+
+        <Button
+            android:id="@+id/homeBtnFr"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="clickFr"
+            android:text="Culture générale" />
+
+        <Button
+            android:id="@+id/HomeBtnDisconnect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="clickDisconnect"
+            android:text="Se déconnecter" />
+
+
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

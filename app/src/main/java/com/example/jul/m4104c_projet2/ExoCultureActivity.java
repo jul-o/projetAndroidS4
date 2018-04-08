@@ -40,11 +40,14 @@ public class ExoCultureActivity extends AppCompatActivity {
         LinearLayout layoutQ = (LinearLayout) findViewById(R.id.exoFrLayoutQuest);
         DBQuestionCulture.init();
         List<DBQuestionCulture> qs = DBQuestionCulture.find(DBQuestionCulture.class, "tag = ?", type.toString());
-        for (int i = 0; i < 10; i++) {
+        for (int i = 0; i < 9; i++) {
             QuestionCulture q = new QuestionCulture(this, qs);
             questions.add(q);
             layoutQ.addView(q);
         }
+        QuestionCulture q = new QuestionCulture(this, new DBQuestionCulture("Vais-je avoir une bonne note ?"," : ","oui","non","peut-être", DBQuestionCulture.TAGS.HIST));
+        questions.add(q);
+        layoutQ.addView(q);
     }
 
     private void initHist() {
@@ -56,6 +59,7 @@ public class ExoCultureActivity extends AppCompatActivity {
             questions.add(q);
             layoutQ.addView(q);
         }
+
     }
 
     private void initFr() {
@@ -80,6 +84,18 @@ public class ExoCultureActivity extends AppCompatActivity {
             if (!q.testAns()) ok = false;
         }
         if (ok) success();
+        else failure();
+    }
+
+    private void failure() {
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_add_score, (ViewGroup) findViewById(R.id.toast_add_score_root));
+        Toast notify = new Toast(this);
+        notify.setView(layout);
+        notify.setDuration(Toast.LENGTH_LONG);
+        TextView infoNotify = (TextView) layout.findViewById(R.id.toastAddScoreTVInfo);
+        infoNotify.setText("Tu t'es trompé sur certaines questions, corrige-les");
+        notify.show();
     }
 
     private void success() {
@@ -97,6 +113,7 @@ public class ExoCultureActivity extends AppCompatActivity {
         Intent intent = new Intent(this, SuccessActivityCulture.class);
 
         startActivity(intent);
+        finish();
     }
 
 }

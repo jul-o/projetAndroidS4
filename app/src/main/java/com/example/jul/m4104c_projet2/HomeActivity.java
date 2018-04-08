@@ -61,4 +61,10 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent = new Intent(this, ChoiceExsCultureActivity.class);
         startActivity(intent);
     }
+
+
+    @Override
+    public void onBackPressed() {
+
+    }
 }

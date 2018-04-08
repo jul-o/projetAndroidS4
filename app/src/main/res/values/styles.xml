@@ -1,11 +1,35 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.Design.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="buttonStyle">@style/m_style_buttons_base</item>
+        <item name="android:fontFamily">monospace</item>
+        <item name="android:colorButtonNormal">@color/colorButtonNormal</item>
+        <item name="android:textViewStyle">@style/m_style_text_view_base</item>
+        <item name="android:background">#3c5879</item>
+        <item name="android:textColor">@color/colorButtonText</item>
+        <item name="android:textColorHint">#92ffffff</item>
+        <item name="android:textSize">20dp</item>
+        <item name="android:textColorPrimary">@color/colorButtonText</item>
+        <!--<item name="android:editTextStyle">@style/m_style_edit</item>-->
+    </style>
+
+
+    <style name="m_style_buttons_base" parent="Widget.AppCompat.Button">
+        <item name="colorControlHighlight">@color/colorButtonClicked</item>
+
+    </style>
+
+    <style name="m_style_text_view_base" parent="Base.Widget.AppCompat.TextView.SpinnerItem" >
+        <item name="android:gravity">center_horizontal</item>
+    </style>
+
+    <style name="m_style_edit" parent="Base.Widget.AppCompat.EditText">
+        <item name="android:textColor">@color/colorButtonText</item>
     </style>
 
 </resources>

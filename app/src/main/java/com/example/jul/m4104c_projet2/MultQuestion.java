@@ -28,6 +28,7 @@ class MultQuestion extends Question {
 
         this.fieldAns = new EditText(ctx);
         fieldAns.setInputType(InputType.TYPE_CLASS_NUMBER);
+        fieldAns.setTextColor(getResources().getColor(R.color.colorButtonText));
 
 
         this.addView(quest);

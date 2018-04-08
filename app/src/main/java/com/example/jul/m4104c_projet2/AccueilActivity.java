@@ -79,7 +79,7 @@ public class AccueilActivity extends AppCompatActivity {
         }else{
             for (int i = 0; i < layoutAccounts.getChildCount(); i++) {
                 LoginSelectAccount elt = (LoginSelectAccount) layoutAccounts.getChildAt(i);
-                elt.getName().setTextColor(Color.rgb(0, 0, 0));
+                elt.getName().setTextColor(getResources().getColor(R.color.colorButtonText));
             }
         }
     }
@@ -91,7 +91,12 @@ public class AccueilActivity extends AppCompatActivity {
 
         for (int i = 0; i < layoutAccounts.getChildCount(); i++) {
             LoginSelectAccount elt = (LoginSelectAccount) layoutAccounts.getChildAt(i);
-            elt.getName().setTextColor(Color.rgb(0, 0, 0));
+            elt.getName().setTextColor(getResources().getColor(R.color.colorButtonText));
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+
     }
 }

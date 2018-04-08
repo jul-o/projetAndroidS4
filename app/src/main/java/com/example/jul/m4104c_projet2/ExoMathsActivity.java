@@ -12,6 +12,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 
 public class ExoMathsActivity extends AppCompatActivity {
@@ -63,8 +64,11 @@ public class ExoMathsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_multiplication_table);
         questions = new ArrayList<>();
         LinearLayout layout = (LinearLayout) findViewById(R.id.exoMultLayoutQuest);
+        ArrayList<Integer> values = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
         for (int i = 1; i <= 10; i++) {
-            MultQuestion quest = new MultQuestion(this, table, i);
+            int index = (int)(Math.random() * (values.size() - 1));
+            MultQuestion quest = new MultQuestion(this, table, values.get(index));
+            values.remove(index);
             questions.add(quest);
             layout.addView(quest);
         }
@@ -91,6 +95,18 @@ public class ExoMathsActivity extends AppCompatActivity {
             if (!q.testAns()) ok = false;
         }
         if (ok) success();
+        else failure();
+    }
+
+    private void failure() {
+        LayoutInflater inflater = getLayoutInflater();
+        View layout = inflater.inflate(R.layout.toast_add_score, (ViewGroup) findViewById(R.id.toast_add_score_root));
+        Toast notify = new Toast(this);
+        notify.setView(layout);
+        notify.setDuration(Toast.LENGTH_LONG);
+        TextView infoNotify = (TextView) layout.findViewById(R.id.toastAddScoreTVInfo);
+        infoNotify.setText("Tu t'es trompé sur certaines questions, corrige-les");
+        notify.show();
     }
 
     private void success() {
@@ -124,6 +140,7 @@ public class ExoMathsActivity extends AppCompatActivity {
         DBAccount.currentAccount.save();
         Intent intent = new Intent(this, SuccessActivityMath.class);
         startActivity(intent);
+        finish();
     }
 
 }

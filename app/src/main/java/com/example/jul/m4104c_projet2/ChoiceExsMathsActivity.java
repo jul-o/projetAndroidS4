@@ -8,6 +8,11 @@ import android.view.View;
 
 
 public class ChoiceExsMathsActivity extends AppCompatActivity {
+    public void clickBack(View view) {
+        finish();
+
+    }
+
     public enum TypeExo{
         CHOICE_MULTIPLICATION,
         MULTIPLICATION,

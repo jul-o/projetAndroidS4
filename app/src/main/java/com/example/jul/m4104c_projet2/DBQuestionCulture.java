@@ -25,43 +25,23 @@ public class DBQuestionCulture extends SugarRecord<DBQuestionCulture>{
             return;
         }
 
-        DBQuestionCulture q = new DBQuestionCulture("le loup", "le mouton", "mange", "manger", "mangé", TAGS.FR);
+        DBQuestionCulture q = new DBQuestionCulture("Le loup", "le mouton", "mange", "manger", "mangé", TAGS.FR);
         q.save();
-        q = new DBQuestionCulture("le lievre", "plus vite que la tortue", "court", "cours", "cour", TAGS.FR);
+        q = new DBQuestionCulture("Le lievre", "plus vite que la tortue", "court", "cours", "cour", TAGS.FR);
         q.save();
-        q = new DBQuestionCulture("hiémal", " : ", "hivernal", "j'ai mal", "figure de style", TAGS.FR);
+        q = new DBQuestionCulture("Hiémal veut dire", " : ", "Hivernal", "J'ai mal", "Figure de style", TAGS.FR);
         q.save();
-        q = new DBQuestionCulture("hyalin", " : ", "transparent", "style de musique ancien", "la réponse D", TAGS.FR);
+        q = new DBQuestionCulture("Hyalin veut dire", " : ", "Transparent", "Style de musique ancien", "La réponse D", TAGS.FR);
         q.save();
-        q = new DBQuestionCulture("", "t'es papaoutai", "où", "ou", "houx", TAGS.FR);
+        q = new DBQuestionCulture("", "t'es papaoutai", "Où", "Ou", "Houx", TAGS.FR);
         q.save();
-        q = new DBQuestionCulture("je vais au", " : ", "Mekke Deunold's", "Macdo", "Mac Donald's", TAGS.FR);
+        q = new DBQuestionCulture("Je vais au", " : ", "Mekke Deunold's", "Macdo", "Mac Donald's", TAGS.FR);
         q.save();
-        q = new DBQuestionCulture("j' ", "pas d'idées de question", "ai", "ais", "ait", TAGS.FR);
+        q = new DBQuestionCulture("J' ", "pas d'idées de question", "ai", "ais", "ait", TAGS.FR);
         q.save();
-        q = new DBQuestionCulture("Jarno est", " : ", "isotherme", "gentil", "serviable", TAGS.FR);
+        q = new DBQuestionCulture("Jarno Baeijs est", " : ", "Un élève du groupe D1", "Gentil", "Serviable", TAGS.FR);
         q.save();
-        q = new DBQuestionCulture("il faudrait que tu ne", "pas malade", "tombes", "tombe", "tombasse", TAGS.FR);
-        q.save();
-        q = new DBQuestionCulture("Panzani", " : ", "aussi", "au ski", "est une marque de pâtes", TAGS.FR);
-        q.save();
-        q = new DBQuestionCulture("le loup", "le mouton", "mange", "manger", "mangé", TAGS.FR);
-        q.save();
-        q = new DBQuestionCulture("le lievre", "plus vite que la tortue", "court", "cours", "cour", TAGS.FR);
-        q.save();
-        q = new DBQuestionCulture("hiémal", " : ", "hivernal", "j'ai mal", "figure de style", TAGS.FR);
-        q.save();
-        q = new DBQuestionCulture("hyalin", " : ", "transparent", "style de musique ancien", "la réponse D", TAGS.FR);
-        q.save();
-        q = new DBQuestionCulture("", "t'es papaoutai", "où", "ou", "houx", TAGS.FR);
-        q.save();
-        q = new DBQuestionCulture("je vais au", " : ", "Mekke Deunold's", "Macdo", "Mac Donald's", TAGS.FR);
-        q.save();
-        q = new DBQuestionCulture("j' ", "pas d'idées de question", "ai", "ais", "ait", TAGS.FR);
-        q.save();
-        q = new DBQuestionCulture("Jarno est", " : ", "isotherme", "gentil", "serviable", TAGS.FR);
-        q.save();
-        q = new DBQuestionCulture("il faudrait que tu ne", "pas malade", "tombes", "tombe", "tombasse", TAGS.FR);
+        q = new DBQuestionCulture("Il faudrait que tu ne", "pas malade", "tombes", "tombe", "tombasse", TAGS.FR);
         q.save();
         q = new DBQuestionCulture("Panzani", " : ", "aussi", "au ski", "est une marque de pâtes", TAGS.FR);
         q.save();
@@ -69,59 +49,29 @@ public class DBQuestionCulture extends SugarRecord<DBQuestionCulture>{
 
 
 
-        q = new DBQuestionCulture("Napoléon est :", " ", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Prise de la Bastille :", " ", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Date de la découverte de l'amérique :", " ", "1492", "2015", "-529", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Leader allemand de la\n" +
-                "seconde guerre mondiale :", " ", "Hitler", "Staline", "Sarkozy", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Jules-", "", "César", "Le-SANG", "L'OVNI", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Jeanne d'Arc :", " ", "Guerre de cent ans", "révolution", "chanteuse de métal médiéval", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Napoléon est :", " ", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Prise de la Bastille :", " ", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Date de la découverte de l'amérique :", " ", "1492", "2015", "-529", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Leader allemand de la\n" +
-                "seconde guerre mondiale :", " ", "Hitler", "Staline", "Sarkozy", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Jules-", "", "César", "Le-SANG", "L'OVNI", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Jeanne d'Arc :", " ", "Guerre de cent ans", "révolution", "chanteuse de métal médiéval", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Napoléon est :", " ", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Prise de la Bastille :", " ", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Date de la découverte de l'amérique :", " ", "1492", "2015", "-529", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Leader allemand de la\n" +
-                "seconde guerre mondiale :", " ", "Hitler", "Staline", "Sarkozy", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Jules-", "", "César", "Le-SANG", "L'OVNI", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Jeanne d'Arc :", " ", "Guerre de cent ans", "révolution", "chanteuse de métal médiéval", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Napoléon est :", " ", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Prise de la Bastille :", " ", "événement de la révolution", "prise de 220 volts", "prise de Kung-Fu", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Date de la découverte de l'amérique :", " ", "1492", "2015", "-529", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Leader allemand de la\n" +
-                "seconde guerre mondiale :", " ", "Hitler", "Staline", "Sarkozy", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Jules-", "", "César", "Le-SANG", "L'OVNI", TAGS.HIST);
-        q.save();
-        q = new DBQuestionCulture("Jeanne d'Arc :", " ", "Guerre de cent ans", "révolution", "chanteuse de métal médiéval", TAGS.HIST);
-        q.save();
 
+        q = new DBQuestionCulture("Napoléon est :", " ", "Français", "Allemand", "Américano-Moldave", TAGS.HIST);
+        q.save();
+        q = new DBQuestionCulture("Prise de la Bastille", " : ", "Événement de la révolution", "Prise de 220 volts", "Prise de Kung-Fu", TAGS.HIST);
+        q.save();
+        q = new DBQuestionCulture("Découverte de l'amérique", " : ", "1492", "2015", "-529", TAGS.HIST);
+        q.save();
+        q = new DBQuestionCulture("Dictateur allemand", " : ", "Hitler", "Staline", "Sarkozy", TAGS.HIST);
+        q.save();
+        q = new DBQuestionCulture("Jules-", "", "César", "Le-SANG", "L'OVNI", TAGS.HIST);
+        q.save();
+        q = new DBQuestionCulture("Jeanne d'Arc", " : ", "Guerre de cent ans", "Révolution", "Chanteuse de métal médiéval", TAGS.HIST);
+        q.save();
+        q = new DBQuestionCulture("Quelle heure est-il ?"," : ","L'heure indiquée sur le téléphone","Madame Persil","6h66",TAGS.HIST);
+        q.save();
+        q = new DBQuestionCulture("Où se trouve l'Afrique ?"," : ","En Afrique","Sur Terre","En France",TAGS.HIST);
+        q.save();
+        q = new DBQuestionCulture("Que mangent les Tibétains ?"," : ","De la nourriture","Des pommes de terre","De la pizza",TAGS.HIST);
+        q.save();
+        q = new DBQuestionCulture("Qui est le président mondial ?"," : ","Sylvain Pierre Durif","Donald Trump","Emmanuel Macron",TAGS.HIST);
+        q.save();
+        q = new DBQuestionCulture("Situation du Japon"," : ","Près de la Corée","En croissance économique","En baisse démographique",TAGS.HIST);
+        q.save();
     }
 
     public DBQuestionCulture() {

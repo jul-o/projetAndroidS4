@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">M4104c-projet</string>
+    <string name="app_name">Revis\'facile</string>
 
-    <string name="accueilWelcome">Bienvenue sur [nom à trouver]</string>
+    <string name="accueilWelcome">Bienvenue sur Revis\'facile !</string>
     <string name="accueilSignup">Créer un compte</string>
     <string name="accueilLogin">Se connecter</string>
     <string name="loginLogin">Se connecter</string>
