@@ -66,7 +66,7 @@ public class ExoMathsActivity extends AppCompatActivity {
         LinearLayout layout = (LinearLayout) findViewById(R.id.exoMultLayoutQuest);
         ArrayList<Integer> values = new ArrayList<>(Arrays.asList(1,2,3,4,5,6,7,8,9,10));
         for (int i = 1; i <= 10; i++) {
-            int index = (int)(Math.random() * (values.size() - 1));
+            int index = (int)(Math.round(Math.random() * (float)(values.size() - 1)));
             MultQuestion quest = new MultQuestion(this, table, values.get(index));
             values.remove(index);
             questions.add(quest);
