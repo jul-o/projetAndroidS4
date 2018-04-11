@@ -3,6 +3,7 @@ package com.example.jul.m4104c_projet2;
 import android.content.Context;
 import android.text.InputType;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 /**
@@ -37,6 +38,26 @@ class MultQuestion extends Question {
 
     public int getAnswer(){
         return ans;
+    }
+
+    @Override
+    public boolean testAns() {
+        boolean goodAns = goodAns();
+        if(goodAns) {
+            imgSucc.setImageResource(R.mipmap.ic_success);
+
+            LinearLayout layoutCont = (LinearLayout) getParent();
+            layoutCont.removeView(this);
+
+            ExoMathsActivity ctx = (ExoMathsActivity) getContext();
+            ctx.removeQuestion(this);
+
+        }else{
+            imgSucc.setImageResource(R.mipmap.ic_failure);
+        }
+        this.removeView(imgSucc);
+        this.addView(imgSucc);
+        return goodAns;
     }
 
     @Override

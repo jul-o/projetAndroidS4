@@ -110,6 +110,12 @@ public class QuestionCulture extends Question {
         boolean goodAns = goodAns();
         if(goodAns) {
             imgSucc.setImageResource(R.mipmap.ic_success);
+
+            LinearLayout layoutCont = (LinearLayout) getParent();
+            layoutCont.removeView(this);
+
+            ExoCultureActivity ctx = (ExoCultureActivity) getContext();
+            ctx.removeQuestion(this);
         }else{
             imgSucc.setImageResource(R.mipmap.ic_failure);
         }
@@ -122,18 +128,9 @@ public class QuestionCulture extends Question {
 
     @Override
     public boolean goodAns() {
-        boolean ok = choice1.isChecked()&&choice1.getText().toString().equals(question.getRep())
+        return choice1.isChecked()&&choice1.getText().toString().equals(question.getRep())
                 ||choice2.isChecked()&&choice2.getText().toString().equals(question.getRep())
                 ||choice3.isChecked()&&choice3.getText().toString().equals(question.getRep());
-        if(ok) {
-            LinearLayout layoutCont = (LinearLayout) getParent();
-            layoutCont.removeView(this);
-
-            ExoCultureActivity ctx = (ExoCultureActivity) getContext();
-            ctx.removeQuestion(this);
-        }
-
-        return ok;
 
     }
 }
