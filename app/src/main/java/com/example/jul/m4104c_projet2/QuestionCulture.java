@@ -2,6 +2,8 @@ package com.example.jul.m4104c_projet2;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.view.Gravity;
+import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -104,10 +106,34 @@ public class QuestionCulture extends Question {
     }
 
     @Override
+    public boolean testAns() {
+        boolean goodAns = goodAns();
+        if(goodAns) {
+            imgSucc.setImageResource(R.mipmap.ic_success);
+        }else{
+            imgSucc.setImageResource(R.mipmap.ic_failure);
+        }
+
+
+        this.removeView(imgSucc);
+        this.addView(imgSucc);
+        return goodAns;
+    }
+
+    @Override
     public boolean goodAns() {
-        return(choice1.isChecked()&&choice1.getText().toString().equals(question.getRep())
+        boolean ok = choice1.isChecked()&&choice1.getText().toString().equals(question.getRep())
                 ||choice2.isChecked()&&choice2.getText().toString().equals(question.getRep())
-                ||choice3.isChecked()&&choice3.getText().toString().equals(question.getRep()));
+                ||choice3.isChecked()&&choice3.getText().toString().equals(question.getRep());
+        if(ok) {
+            LinearLayout layoutCont = (LinearLayout) getParent();
+            layoutCont.removeView(this);
+
+            ExoCultureActivity ctx = (ExoCultureActivity) getContext();
+            ctx.removeQuestion(this);
+        }
+
+        return ok;
 
     }
 }

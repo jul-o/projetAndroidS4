@@ -1,6 +1,8 @@
 package com.example.jul.m4104c_projet2;
 
 import android.content.Context;
+import android.view.Gravity;
+import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
@@ -15,6 +17,10 @@ abstract class Question extends LinearLayout {
     public Question(Context context) {
         super(context);
         imgSucc = new ImageView(context);
+        LinearLayout.LayoutParams p = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+        p.gravity = Gravity.CENTER_HORIZONTAL;
+        p.setMargins(0,0,0,200);
+        imgSucc.setLayoutParams(p);
     }
 
     public abstract boolean goodAns();

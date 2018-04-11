@@ -80,8 +80,13 @@ public class ExoCultureActivity extends AppCompatActivity {
     //common success test to all math exs
     public void clickExoSubmit(View view) {
         boolean ok = true;
-        for (Question q : questions) {
-            if (!q.testAns()) ok = false;
+
+        for(int i = 0; i < questions.size(); ){
+            //q.testAns supprime une la question si elle juste donc pas d'incrémentation
+            if (!questions.get(i).testAns()) {
+                ok = false;
+                i++;
+            }
         }
         if (ok) success();
         else failure();
@@ -114,6 +119,10 @@ public class ExoCultureActivity extends AppCompatActivity {
 
         startActivity(intent);
         finish();
+    }
+
+    public void removeQuestion(QuestionCulture quest){
+        questions.remove(quest);
     }
 
 }
